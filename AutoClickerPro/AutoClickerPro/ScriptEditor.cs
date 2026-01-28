@@ -72,9 +72,22 @@ namespace AutoClickerPro
             }
 
 
-            // 綁定 UI 更新事件
-            cmbActionType.SelectedIndexChanged += (s, e) => UpdateUIState();
+            // 綁定事件 (如果你沒在設計畫面綁定，就要寫這行)
+            txtKey.KeyDown += txtKey_KeyDown;
 
+            // *** 新增：當切換到「模擬按鍵」模式時，檢查 txtKey 是否有值 ***
+            cmbActionType.SelectedIndexChanged += (s, e) =>
+            {
+                UpdateUIState();
+                // 如果切換到按鍵模式，且還沒設定過按鍵，提示使用者
+                if ((ActionType)cmbActionType.SelectedValue == ActionType.KeyPress)
+                {
+                    if (txtKey.Tag == null)
+                    {
+                        txtKey.Text = "請點擊並按下按鍵";
+                    }
+                }
+            };
             // 初始化 UI 狀態
             UpdateUIState();
         }
@@ -118,7 +131,15 @@ namespace AutoClickerPro
 
             if (action.Type == ActionType.KeyPress)
             {
-                if (txtKey.Tag != null) action.KeyCode = (int)txtKey.Tag;
+                // 防呆：如果 Tag 是空的，代表使用者沒按過鍵
+                if (txtKey.Tag == null)
+                {
+                    MessageBox.Show("請先點擊文字框，並按下鍵盤上的一個按鍵！");
+                    return; // 中斷，不給加入
+                }
+
+                // 從 Tag 取出 int
+                action.KeyCode = (int)txtKey.Tag;
             }
 
             if (action.Type == ActionType.RandomKey)
@@ -137,9 +158,19 @@ namespace AutoClickerPro
 
         private void txtKey_KeyDown(object sender, KeyEventArgs e)
         {
-            txtKey.Text = e.KeyCode.ToString();
-            txtKey.Tag = (int)e.KeyCode;
-            e.SuppressKeyPress = true; // 防止輸入到 TextBox
+            // 1. 取得按下的按鍵代碼 (例如 Keys.A, Keys.F1)
+            Keys key = e.KeyCode;
+
+            // 2. 顯示按鍵名稱給使用者看
+            txtKey.Text = key.ToString();
+
+            // 3. 重要：將按鍵的數值 (int) 存入 Tag 屬性
+            // 我們之後存檔時，不是讀 Text，而是讀這個 Tag
+            txtKey.Tag = (int)key;
+
+            // 4. 重要：告訴系統「這個按鍵我處理掉了」，防止發出系統提示音或輸入文字
+            e.SuppressKeyPress = true;
+            e.Handled = true;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

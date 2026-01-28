@@ -64,7 +64,7 @@
             this.lstActions.AllowDrop = true;
             this.lstActions.FormattingEnabled = true;
             this.lstActions.ItemHeight = 15;
-            this.lstActions.Location = new System.Drawing.Point(322, 48);
+            this.lstActions.Location = new System.Drawing.Point(380, 85);
             this.lstActions.Name = "lstActions";
             this.lstActions.Size = new System.Drawing.Size(428, 379);
             this.lstActions.TabIndex = 0;
@@ -79,9 +79,9 @@
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
             this.groupBox1.Controls.Add(this.cmbActionType);
-            this.groupBox1.Location = new System.Drawing.Point(23, 12);
+            this.groupBox1.Location = new System.Drawing.Point(23, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(275, 289);
+            this.groupBox1.Size = new System.Drawing.Size(324, 320);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "鍵鼠";
@@ -89,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 261);
+            this.label1.Location = new System.Drawing.Point(41, 290);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 15);
             this.label1.TabIndex = 6;
@@ -97,7 +97,7 @@
             // 
             // numDelay
             // 
-            this.numDelay.Location = new System.Drawing.Point(138, 256);
+            this.numDelay.Location = new System.Drawing.Point(169, 280);
             this.numDelay.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -122,26 +122,31 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.cmbRandomType);
             this.panel2.Controls.Add(this.txtKey);
-            this.panel2.Location = new System.Drawing.Point(44, 150);
+            this.panel2.Location = new System.Drawing.Point(44, 158);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.Size = new System.Drawing.Size(215, 116);
             this.panel2.TabIndex = 2;
             // 
             // cmbRandomType
             // 
+            this.cmbRandomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRandomType.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cmbRandomType.FormattingEnabled = true;
-            this.cmbRandomType.Location = new System.Drawing.Point(12, 57);
+            this.cmbRandomType.Location = new System.Drawing.Point(12, 66);
             this.cmbRandomType.Name = "cmbRandomType";
-            this.cmbRandomType.Size = new System.Drawing.Size(121, 23);
+            this.cmbRandomType.Size = new System.Drawing.Size(121, 28);
             this.cmbRandomType.TabIndex = 1;
             // 
             // txtKey
             // 
+            this.txtKey.BackColor = System.Drawing.Color.White;
             this.txtKey.Location = new System.Drawing.Point(12, 14);
+            this.txtKey.Multiline = true;
             this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(88, 25);
+            this.txtKey.ReadOnly = true;
+            this.txtKey.Size = new System.Drawing.Size(187, 35);
             this.txtKey.TabIndex = 0;
-            this.txtKey.Text = "按鍵";
+            this.txtKey.Text = "請點擊此處並按下按鍵";
             // 
             // panel1
             // 
@@ -150,9 +155,9 @@
             this.panel1.Controls.Add(this.txtY);
             this.panel1.Controls.Add(this.txtX);
             this.panel1.Controls.Add(this.chkCurrentPos);
-            this.panel1.Location = new System.Drawing.Point(44, 43);
+            this.panel1.Location = new System.Drawing.Point(44, 51);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.Size = new System.Drawing.Size(215, 100);
             this.panel1.TabIndex = 1;
             // 
             // chkLock
@@ -191,17 +196,19 @@
             // 
             // cmbActionType
             // 
+            this.cmbActionType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbActionType.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cmbActionType.FormattingEnabled = true;
-            this.cmbActionType.Location = new System.Drawing.Point(44, 14);
+            this.cmbActionType.Location = new System.Drawing.Point(44, 17);
             this.cmbActionType.Name = "cmbActionType";
-            this.cmbActionType.Size = new System.Drawing.Size(155, 23);
+            this.cmbActionType.Size = new System.Drawing.Size(215, 28);
             this.cmbActionType.TabIndex = 0;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(192, 430);
+            this.btnDelete.Location = new System.Drawing.Point(147, 481);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(106, 34);
+            this.btnDelete.Size = new System.Drawing.Size(120, 44);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "刪除動作";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -209,9 +216,9 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(23, 430);
+            this.btnAdd.Location = new System.Drawing.Point(23, 481);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(104, 34);
+            this.btnAdd.Size = new System.Drawing.Size(104, 44);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "加入動作";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -219,18 +226,19 @@
             // 
             // txtScriptName
             // 
-            this.txtScriptName.Location = new System.Drawing.Point(354, 12);
+            this.txtScriptName.Location = new System.Drawing.Point(456, 481);
+            this.txtScriptName.Multiline = true;
             this.txtScriptName.Name = "txtScriptName";
-            this.txtScriptName.Size = new System.Drawing.Size(113, 25);
+            this.txtScriptName.Size = new System.Drawing.Size(148, 34);
             this.txtScriptName.TabIndex = 2;
             this.txtScriptName.Text = "設定腳本名稱";
             this.txtScriptName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(557, 441);
+            this.btnSave.Location = new System.Drawing.Point(636, 481);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 33);
+            this.btnSave.Size = new System.Drawing.Size(83, 44);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "儲存\r\n";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -238,9 +246,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(675, 441);
+            this.btnCancel.Location = new System.Drawing.Point(725, 481);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 33);
+            this.btnCancel.Size = new System.Drawing.Size(83, 44);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -251,9 +259,9 @@
             this.groupBox2.Controls.Add(this.numLoopCount);
             this.groupBox2.Controls.Add(this.rdoCount);
             this.groupBox2.Controls.Add(this.rdoInfinite);
-            this.groupBox2.Location = new System.Drawing.Point(23, 308);
+            this.groupBox2.Location = new System.Drawing.Point(23, 344);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(275, 116);
+            this.groupBox2.Size = new System.Drawing.Size(324, 120);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "循環";
@@ -261,7 +269,7 @@
             // numLoopCount
             // 
             this.numLoopCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numLoopCount.Location = new System.Drawing.Point(110, 70);
+            this.numLoopCount.Location = new System.Drawing.Point(138, 77);
             this.numLoopCount.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -273,7 +281,7 @@
             0,
             0});
             this.numLoopCount.Name = "numLoopCount";
-            this.numLoopCount.Size = new System.Drawing.Size(120, 25);
+            this.numLoopCount.Size = new System.Drawing.Size(121, 25);
             this.numLoopCount.TabIndex = 2;
             this.numLoopCount.Value = new decimal(new int[] {
             1,
@@ -284,7 +292,7 @@
             // rdoCount
             // 
             this.rdoCount.AutoSize = true;
-            this.rdoCount.Location = new System.Drawing.Point(16, 73);
+            this.rdoCount.Location = new System.Drawing.Point(16, 77);
             this.rdoCount.Name = "rdoCount";
             this.rdoCount.Size = new System.Drawing.Size(88, 19);
             this.rdoCount.TabIndex = 1;
@@ -295,7 +303,7 @@
             // rdoInfinite
             // 
             this.rdoInfinite.AutoSize = true;
-            this.rdoInfinite.Location = new System.Drawing.Point(16, 24);
+            this.rdoInfinite.Location = new System.Drawing.Point(16, 41);
             this.rdoInfinite.Name = "rdoInfinite";
             this.rdoInfinite.Size = new System.Drawing.Size(88, 19);
             this.rdoInfinite.TabIndex = 0;
@@ -307,7 +315,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(762, 486);
+            this.ClientSize = new System.Drawing.Size(820, 537);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnDelete);
