@@ -1,0 +1,10 @@
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\bin\Release\AutoClickerPro.exe
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\bin\Release\AutoClickerPro.pdb
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.csproj.AssemblyReference.cache
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.form1.resources
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.Properties.Resources.resources
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.ScriptEditor.resources
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.csproj.GenerateResource.cache
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.csproj.CoreCompileInputs.cache
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.exe
+C:\Users\10106\source\repos\AutoClickerPro - 複製\AutoClickerPro\obj\Release\AutoClickerPro.pdb
